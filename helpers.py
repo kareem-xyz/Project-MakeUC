@@ -1,8 +1,8 @@
 # Arduino Code Setup
 import serial
-arduino = serial.Serial(port='COM9', baudrate=9600, timeout=1)
+arduino = serial.Serial(port='/dev/tty.usbserial-0x00100000 / 1', baudrate=9600, timeout=1)
 def close_serial_connection():
-    arduino = serial.Serial(port='COM9', baudrate=9600, timeout=1)
+    arduino = serial.Serial(port='/dev/tty.usbserial-0x00100000 / 1', baudrate=9600, timeout=1)
     if arduino.is_open:
         arduino.close()
 
