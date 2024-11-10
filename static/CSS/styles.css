@@ -1,0 +1,60 @@
+
+html{
+    height: 100%;
+}
+body 
+{
+    height:100%;
+    margin-top: 2%;
+    text-align: center;
+    background-size: cover;
+}
+.image-fit {
+    height: '200px'
+}
+.colored-border {
+    border: 2px solid #ff5733; /* Adjust width, style, and color as needed */
+    padding: 10px; /* Optional: adds space inside the border */
+}
+.card {
+    background-color: black"
+}
+
+#makeuc
+{
+border-bottom: 0.1rem solid rgba(0, 0, 0, 0.816);
+margin-bottom: 1rem;
+}
+
+.blurry {
+    backdrop-filter: blur(75px); /* Adjust the blur radius as needed */
+    z-index: 1;
+    border-radius: 10%;
+}
+
+  @keyframes animate {
+    0% { 
+      width: 0px;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .waviy {
+    position: relative;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    color: #000;
+    text-transform: uppercase;
+    animation: flip 8s infinite;
+    animation-delay: calc(0.8s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateX(360deg)
+    }
+  }

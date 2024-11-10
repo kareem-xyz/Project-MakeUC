@@ -1,0 +1,47 @@
+<!-- HTML Base from Bootstrap -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- D3 for maps -->
+    <script src="https://d3js.org/d3.v5.min.js"></script> 
+    <link href="static/CSS/styles.css" rel="stylesheet">
+
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+        <div id="makeuc" class="waviy">
+            <span style="--i:1">M</span>
+            <span style="--i:2">a</span>
+            <span style="--i:3">k</span>
+            <span style="--i:4">e</span>
+            <span style="--i:5">U</span>
+            <span style="--i:6">C</span>
+            <span style="--i:7">2</span>
+            <span style="--i:8">0</span>
+            <span style="--i:9">2</span>
+            <span style="--i:10">4</span>
+        </div>
+    <div>
+        {% block body %}
+        {% endblock %}
+        <footer class="mb-1 small text-center">
+            Made by <strong>Yousif Elkady and Kareem Ahmed - </strong>
+            <a href="https://github.com/kareem-xyz/Project-MakeUC">GitRepository - </a>
+            <a href="">Contact</a>
+        </footer>
+    </div>
+    {% block scripts %}
+    {% endblock %}
+  </body>
+</html>
