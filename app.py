@@ -15,7 +15,7 @@ Session(app)
 @app.route('/')
 def index():
     session.clear()
-    close_serial_connection()
+    # close_serial_connection()
     sensor_data = read_from_arduino()
     return f"Sensor Value: {sensor_data}" if sensor_data else "No data received"
     # return render_template('home.html')
