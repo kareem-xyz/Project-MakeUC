@@ -1,10 +1,10 @@
 # Arduino Code Setup
-# import serial
-# arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1)
-# def close_serial_connection():
-#     arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1)
-#     if arduino.is_open:
-#         arduino.close()
+import serial
+arduino = serial.Serial(port='COM9', baudrate=9600, timeout=1)
+def close_serial_connection():
+    arduino = serial.Serial(port='COM9', baudrate=9600, timeout=1)
+    if arduino.is_open:
+        arduino.close()
 
 
 # Reads arudino data continuosly, not sure how this will work in a flask app yet.
@@ -16,11 +16,10 @@
 #         if data:
 #             print(data)
             
-# # Function to read data from the Arduino ONCE
-# def read_from_arduino():
-#     if arduino.in_waiting > 0:
-#         data = []
-#         # CURRENTLY THIS POSTS ONLY ONE LINE. NEED TO SEE HOW TO ADD MULTIPLE VALUES
-#         data.append(arduino.readline().decode('utf-8').strip())  # Read a line and decode it ()
-#         return data
-#     return None
+# Function to read data from the Arduino ONCE
+def read_from_arduino():
+    if arduino.in_waiting > 0:
+        # CURRENTLY THIS POSTS ONLY ONE LINE. NEED TO SEE HOW TO ADD MULTIPLE VALUES
+        data = arduino.readline().decode('utf-8').strip()  # Read a line and decode it ()
+        return data
+    return None

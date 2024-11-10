@@ -12,12 +12,13 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True # Ensure templates are auto-reloaded,
 # Load index (Homepage)
 @app.route('/')
 def index():
-    # close_serial_connection()
-    # sensor_data = read_from_arduino()
+    close_serial_connection()
+    # sensor_data = read_from_arduino().split(',')
+    
     # return f"Sensor Value: {sensor_data}" if sensor_data else "No data received"
     sensor_data = [
-        {'number':0,'name':'Cairo Right', 'humidity':10},
-        {'number':1,'name':'Cairo Left', 'humidity':90}
+        {'number':0,'name':'Cairo Right', 'humidity':read_from_arduino()},
+        {'number':1,'name':'Cairo Left', 'humidity':read_from_arduino()}
         ]
     return render_template('home.html', sensor_data=sensor_data) # Change number to the actual read value
 
