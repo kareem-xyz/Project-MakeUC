@@ -17,8 +17,8 @@ arduino_2 = Serial(port='COM11', baudrate=9600, timeout=0)
 def index():
     # close_serial_connection()
     sensor_data = [
-    {'number':0,'name':'Cairo Right', 'humidity': read_from_arduino(arduino_1)},
-    {'number':1,'name':'Cairo Left', 'humidity': read_from_arduino(arduino_2)}
+    {'number':0,'name':'East Cairo', 'humidity': read_from_arduino(arduino_1)},
+    {'number':1,'name':'West Cairo', 'humidity': read_from_arduino(arduino_2)}
     ]
     # return f"Sensor Value: {sensor_data}" if sensor_data else "No data received"
     return render_template('home.html', sensor_data=sensor_data) # Change number to the actual read value
