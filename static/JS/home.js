@@ -43,4 +43,13 @@ function setupSensorsElements(sensor_array) {
 
 }
 
+// function fetchData() {
+//     fetch('http://127.0.0.1:5000/refresh_values_')  // Flask server URL
+//         .then(response => response.json())   // Parse JSON response
+//         .then(data => {
+//             setupSensorsElements(data);
+//         })
+//         .catch(error => console.error('Error:', error));
+//     }
+
 
