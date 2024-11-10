@@ -19,6 +19,6 @@ def readserial(comport, baudrate):
 # Function to read data from the Arduino ONCE
 def read_from_arduino():
     if arduino.in_waiting > 0:
-        data = arduino.readline().decode('utf-8').strip()  # Read a line and decode it
+        data = arduino.readline(100).decode('utf-8').strip()  # Read a line and decode it
         return data
     return None
