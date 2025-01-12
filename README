@@ -1,2 +1,29 @@
-MAKE UC 2024 Project, Skywatch.
 A scalable air quality monitoring network that provides real-time, region-wide data to protect vulnerable populations from hazardous air conditions, helping communities stay informed and safe.
+
+## Inspiration
+
+Both of us have lived on the outer edges of Cairo and have been exposed to and caught of guard by very sudden harmful weather changes, like dust storms. We wanted to make a difference for those who reside in regions similar to the one we lived in, and afford them  peace of mind and sense of security in their day -to-day life.
+
+## What it does
+
+It is a system of Arduino microcontrollers that continuously measures the humidity level of the air as a percentage, and relays the data to a central device. There, it is processed into a user-friendly and easily-digestible dynamic map. It is divided into the East and West halves of Cairo, which change color according to a gradient tied to the level of air pollution.
+
+## How we built it
+
+We used Arduino Uno R4 microcontrollers to collect and relay data from humidity sensors. We used Pyserial (a python library) to convert serial data from the Arduinos into usable Python files. We then utilized Flask (another python library) to host a local HTML webpage. JavaScript, HTML , CSS, and a variety of their libraries were used to make a fullstack webpage.
+
+## Challenges we ran into
+
+We faced significant and numerous technical challenges in both our hardware and software. Although we were successful in configuring our Arduinos to be accessible by Bluetooth, we were unable to reliably transmit consistent streams of data due to the unreliability of the Arduino R4 firmware and the lack of consistent documentation about the ArduinoBLE library. The Arduino IDE on one of our devices spontaneously bricked and and significantly slowed down our workflow for a bit, and an unfortunate amount of Arduino code was lost. We also faced a lot of trouble with our Python environment and the pathing for the Pyserial library. On the UI side of things, we had much trouble overlaying layers of images on top of each other, but our e
+
+## Accomplishments that we're proud of
+
+We built a functional full stack website that seamlessly integrates with our embedded systems and circuits, and we were able to rebound from our setbacks.
+
+## What we learned
+
+We learned much about circuit design, embedded systems, full stack development, UI design, as well as Github and its repositories. We also gained experience in IoT as well as graphic design.
+
+## What's next for SkyWatch
+
+We aim to expand the system and switch to wifi or radio-based communication to increase range and scale. We also want to flesh out the UI and add more interactivity, as well as using more sensors to gain more holistic measurements.
